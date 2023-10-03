@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CHORUS -  Content Hub - Organise | ReUse | Share </title>
+
+    <link type="text/css" href="css/chorus.css" rel="stylesheet">
+    <link type="text/css" href="js/jquery-ui-1.10.4/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+    <link type="text/css" href="js/jquery.selectbox-0.2/css/jquery.selectbox.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="js/modernizr-latest-development.js"></script>
+    <script type="text/javascript" src="js/jquery.selectbox-0.2/js/jquery.selectbox-0.2-modified.js"></script>
+    <script type="text/javascript" src="js/chorus.main.js"></script>
+
+</head>
+<body>
+
+
+
+<div id="wrapper">
+    <header id="main_header">
+        <div id="header-inner">
+            <a id="logo" href="./" title="PEARSON">
+            </a>
+            <span id="always_learning"></span>
+        </div>
+    </header>
+    <section id="content">
+        <header id="content_header" class="row">
+            <a id="chorus-logo" href="./">CHORUS - Content Hub - Organize | ReUse | Share</a>
+            <div id="welcome-panel">
+                <span class="lang-select">
+                    <span class="flag uk"></span>
+                    <span class="lang-select-box">
+                        <select>
+                            <option class="uk" value="uk">English</option>
+                            <option class="spain" value="spain">Spanish</option>
+                            <option class="italy" value="italy">Italian</option>
+                            <option class="portugal" value="portugal">Portuguese</option>
+                            <option class="australia" value="australia">English (Australian)</option>
+                            <option class="brazil" value="brazil">brazilian</option>
+                        </select>
+                    </span>
+                </span>
+                <span class="message">Welcome&nbsp;</span>
+                <span class="username">Lina</span>
+                <a href="./" class="logout">Logout</a>
+            </div>
+        </header>
+        <!-- Page content begin -->
+        <div id="tabbed-control" class="tabbed-control">
+            <nav id="tabbed-navigation">
+                <ul>
+                    <li id="tab1" class="tab"><a class="selected" href="#"><span>Search</span></a></li>
+                    <li id="tab2" class="tab"><a href="#"><span>My List</span></a></li>
+                    <li id="tab3" class="tab"><a href="#"><span>Bulk Upload</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- Search Tab Contents -->
+
+            <section id="content1" class="tabbed-content drop-shadow">
+                <h2>Search</h2>
+                <form id="search-frm">
+                    <div class="panel grey-bg">
+                        <div class="row posRel">
+                            <div class="column size1of3">
+                                <div class="inner">
+                                    <ul class="">
+                                        <li class="form-row">
+                                            <label for="keyword">Search by keyword</label><input id="keyword" type="text"/>
+                                        </li>
+                                        <!--<li class="button-row">
+                                            <button id="keyword-search-btn" class="pri-button" >Search</button>
+                                        </li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="column size1of3 separator">
+                                <div class="inner">
+                                    <!--<ul class="">
+                                        <li class="form-row">
+                                            <label>Filters</label>
+                                            <span class="container"><input type="checkbox"/><span>Filter 1</span></span>
+                                            <span class="container"><input type="checkbox"/><span>Filter 2</span></span>
+                                            <span class="container"><input type="checkbox"/><span>Filter 3</span></span>
+                                            <span class="container"><input type="checkbox"/><span>All</span></span>
+                                        </li>
+                                    </ul> -->
+                                </div>
+                            </div>
+                            <div class="column size1of3 separator">
+                                <div class="inner">
+                                    <ul>
+                                        <li class="form-row">
+                                        <label for="resource">Search by Resource ID</label><input id="resource" type="text"/>
+                                    </li>
+                                        <li class="button-row">
+                                            <button id="search-btn" class="pri-button" >Search</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="advanced-search-container" class="row">
+                            <div class="column size1of1">
+                                <div class="inner">
+                                    <button id="advanced-search-btn" class="sec-button closed">Advanced Search<i class="icon icon-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="advanced-search" class="inner">
+                            <div  class="panel">
+                                <div class="row">
+                                    <div class="column size1of1">
+                                        <div class="inner">
+                                            <ul id="advanced-search-optiions" class="row">
+                                                <li class="option-group column size1of5">
+                                                    <div class="inner">
+                                                        <label for="subject">SUBJECT</label>
+                                                        <input id="subject" type="text" />
+                                                    </div>
+                                                </li>
+                                                <li class="option-group column size1of5 dk-separator">
+                                                    <div class="inner">
+                                                        <label>LEVEL</label>
+                                                        <select>
+                                                            <option>K9</option>
+                                                            <option>K8</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <li class="option-group column size1of5 dk-separator">
+                                                    <div class="inner">
+                                                        <label>LANGUAGE</label>
+                                                        <select>
+                                                            <option>English (UK)</option>
+                                                            <option>English (USA)</option>
+                                                            <option>French</option>
+                                                            <option>Spanish</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <li class="option-group column size1of5 dk-separator">
+                                                    <div class="inner">
+                                                        <label>COUNTRY</label>
+                                                        <select>
+                                                            <option>Italy</option>
+                                                            <option>France</option>
+                                                            <option>Spain</option>
+                                                            <option selected>UK</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                                <li class="option-group column size1of5 dk-separator">
+                                                    <div class="inner">
+                                                        <label>FORMAT</label>
+                                                        <select>
+                                                            <option>Flash</option>
+                                                            <option>Scorm</option>
+                                                            <option>AVI</option>
+                                                            <option>MP£</option>
+                                                        </select>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="search-results-container" class="row clearfix">
+                        <div class="column size1of1">
+                            <div class="row">
+                                <div class="column size1of3">
+                                    <div class="inner panel grey-bg margin-right">
+                                        <h4>Current search</h4>
+                                        <div id="keyword-container" class="panel">
+                                            <div class="inner">
+                                                <span class="keyword">keywords <a href="" title="Delete keyword"><i class="icon icon-minus-sign"></i> </a> </span>
+                                                <a class="clear" href="#">Clear all</a>
+                                            </div>
+                                        </div>
+                                        <div id="results-filters">
+                                            <h4>Narrow you results</h4>
+                                            <ul>
+                                                <li class="form-row bott-separator">
+                                                    <label>Content Type</label>
+                                                    <ul class="filter-list">
+                                                        <li>
+                                                            <a href="" class="filter">Assessment<span>23</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="filter">Interactive Lesson<span>10</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="filter">Document<span>46</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="filter">Image<span>103</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="form-row bott-separator">
+                                                    <label>Format</label>
+                                                    <ul class="filter-list">
+                                                        <li>
+                                                            <a href="" class="filter">Flash<span>16</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="filter">Scorm<span>2</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="filter">AVI<span>10</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="filter">MP3<span>35</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="form-row bott-separator">
+                                                    <label>Level</label>
+                                                    <ul class="filter-list">
+                                                        <li>
+                                                            <a href="" class="filter">K9<span>5</span></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="filter">K8<span>16</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <h4>File Size</h4>
+                                            <div class="slider-bar">
+                                                <div class="bar">
+                                                    <span class="slider">&nbsp;</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column size2of3">
+                                    <div class="inner panel margin-left">
+                                        <div class="pagination-control top">
+                                            <span>Showing result: 1-10/189</span>
+                                            <a href="#" class="disabled">First</a>
+                                            <a href="#" class="disabled">Prev</a>
+                                            <a href="#" class="disabled">1</a>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">Next</a>
+                                            <a href="#">Last</a>
+                                        </div>
+                                        <ul id="results-list">
+                                            <li class="result">
+                                                <div class="thumb-container">
+                                                    <div class="bubble">
+                                                        <div class="speech"><p>At a glance details!</p></div>
+                                                    </div>
+                                                    <div class="thumb">
+                                                        <a class="result-detail-link" href="./result-detail.html">
+                                                            <img src="assets/images/Placeholder.png" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="options">
+                                                        <span><i class="icon icon-facetime-video"></i><!--<span class="rf">/span>--> <i class="icon icon-play-circle"></i> </span>
+                                                    </div>
+                                                </div>
+                                                <div class="result-detail-container">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="label">Title:</span>
+                                                            <span class="data">Parts of a flower</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">ID:</span>
+                                                            <span class="data">A12345</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Description:</span>
+                                                            <span class="data">Biology game focusing on pollination cycle of plants</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Subject:</span>
+                                                            <span class="data">Botany</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Format:</span>
+                                                            <span class="data">SWF</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Keywords:</span>
+                                                            <span class="data">PLANT, FLOWERS, POLLEN</span>
+                                                        </li>
+                                                        <li class="actions">
+                                                            <span class="add-to-list">Add to list</span>
+                                                            <span class="email"><i class="icon icon-envelope"></i> Email Rights Dept</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="result">
+                                                <div class="thumb-container">
+                                                    <div class="bubble">
+                                                        <div class="speech"><p>At a glance details!</p></div>
+                                                    </div>
+                                                    <div class="thumb">
+                                                        <a class="result-detail-link" href="./result-detail.html">
+                                                            <img src="assets/images/Placeholder.png" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="options">
+                                                        <span><i class="icon icon-facetime-video"></i><!--<span class="rf">/span>--> <i class="icon icon-play-circle"></i> </span>
+                                                    </div>
+                                                </div>
+                                                <div class="result-detail-container">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="label">Title:</span>
+                                                            <span class="data">Parts of a flower</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">ID:</span>
+                                                            <span class="data">A12345</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Description:</span>
+                                                            <span class="data">Biology game focusing on pollination cycle of plants</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Subject:</span>
+                                                            <span class="data">Botany</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Format:</span>
+                                                            <span class="data">SWF</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Keywords:</span>
+                                                            <span class="data">PLANT, FLOWERS, POLLEN</span>
+                                                        </li>
+                                                        <li class="actions">
+                                                            <span class="add-to-list">Add to list</span>
+                                                            <span class="email"><i class="icon icon-envelope"></i> Email Rights Dept</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="result">
+                                                <div class="thumb-container">
+                                                    <div class="bubble">
+                                                        <div class="speech"><p>At a glance details!</p></div>
+                                                    </div>
+                                                    <div class="thumb">
+                                                        <a class="result-detail-link" href="./result-detail.html">
+                                                            <img src="assets/images/Placeholder.png" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="options">
+                                                        <span><i class="icon icon-facetime-video"></i><!--<span class="rf">/span>--> <i class="icon icon-play-circle"></i> </span>
+                                                    </div>
+                                                </div>
+                                                <div class="result-detail-container">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="label">Title:</span>
+                                                            <span class="data">Parts of a flower</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">ID:</span>
+                                                            <span class="data">A12345</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Description:</span>
+                                                            <span class="data">Biology game focusing on pollination cycle of plants</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Subject:</span>
+                                                            <span class="data">Botany</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Format:</span>
+                                                            <span class="data">SWF</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">Keywords:</span>
+                                                            <span class="data">PLANT, FLOWERS, POLLEN</span>
+                                                        </li>
+                                                        <li class="actions">
+                                                            <span class="add-to-list">Add to list</span>
+                                                            <span class="email"><i class="icon icon-envelope"></i> Email Rights Dept</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="pagination-control bottom">
+                                            <span>Showing result: 1-10/189</span>
+                                            <a href="#" class="disabled">First</a>
+                                            <a href="#" class="disabled">Prev</a>
+                                            <a href="#" class="disabled">1</a>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">4</a>
+                                            <a href="#">5</a>
+                                            <a href="#">6</a>
+                                            <a href="#">Next</a>
+                                            <a href="#">Last</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- My List Tab Contents -->
+
+            <section id="content2" class="tabbed-content drop-shadow">
+                <h2>My List</h2>
+
+                <div id="concertina-container" class="panel">
+
+                    <div class="concertina">
+                        <div class="header primary">
+                            <p class="name">Lina's list</p>
+                            <p class="toggle">
+                                <a class="deleteList" href=""><i class="icon icon-minus-sign"></i> </a>
+                                <a class="export-list" href="">Export list</a>
+                                <a class="share-list" href="">Share list</a>
+                                <span class="created-date">Created: 15/08/13</span>
+                                <i class="icon icon-expand"></i>
+                            </p>
+                        </div>
+                        <div class="body">
+                            <table class="list-tbl">
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">A12345</td>
+                                    <td class="des">Where have all my shapes gone?</td>
+                                    <td class="type">eBook</td>
+                                    <td class="size">1GB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">CBHY564546769978654</td>
+                                    <td class="des">Volcanos</td>
+                                    <td class="type">Video</td>
+                                    <td class="size">56MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">C1234512345</td>
+                                    <td class="des">Science 3: The Big Bang Theory</td>
+                                    <td class="type">Video</td>
+                                    <td class="size">345MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">PQ45566TYU45</td>
+                                    <td class="des">Earth and Space</td>
+                                    <td class="type">Interactive Lesson</td>
+                                    <td class="size">150MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">A12345</td>
+                                    <td class="des">Shapes</td>
+                                    <td class="type">Interactive lesson</td>
+                                    <td class="size">567MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">A12345</td>
+                                    <td class="des">Maps</td>
+                                    <td class="type">eBook</td>
+                                    <td class="size">123MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">A12345</td>
+                                    <td class="des">Where have all my shapes gone?</td>
+                                    <td class="type">eBook</td>
+                                    <td class="size">1GB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">CBHY564546769978654</td>
+                                    <td class="des">Volcanos</td>
+                                    <td class="type">Video</td>
+                                    <td class="size">56MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="concertina">
+                        <div class="header primary">
+                            <p class="name">Paul's list</p>
+                            <p class="toggle">
+                                <a class="deleteList" href=""><i class="icon icon-minus-sign"></i> </a>
+                                <a class="export-list" href="">Export list</a>
+                                <a class="share-list" href="">Share list</a>
+                                <span class="created-date">Created: 15/08/13</span>
+                                <i class="icon icon-expand"></i>
+                            </p>
+                        </div>
+                        <div class="body">
+                            <table class="list-tbl">
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">A12345</td>
+                                    <td class="des">Where have all my shapes gone?</td>
+                                    <td class="type">eBook</td>
+                                    <td class="size">1GB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">CBHY564546769978654</td>
+                                    <td class="des">Volcanos</td>
+                                    <td class="type">Video</td>
+                                    <td class="size">56MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">C1234512345</td>
+                                    <td class="des">Science 3: The Big Bang Theory</td>
+                                    <td class="type">Video</td>
+                                    <td class="size">345MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">PQ45566TYU45</td>
+                                    <td class="des">Earth and Space</td>
+                                    <td class="type">Interactive Lesson</td>
+                                    <td class="size">150MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">A12345</td>
+                                    <td class="des">Shapes</td>
+                                    <td class="type">Interactive lesson</td>
+                                    <td class="size">567MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="concertina">
+                        <div class="header primary">
+                            <p class="name">Karen's list</p>
+                            <p class="toggle">
+                                <a class="deleteList" href=""><i class="icon icon-minus-sign"></i> </a>
+                                <a class="export-list" href="">Export list</a>
+                                <a class="share-list" href="">Share list</a>
+                                <span class="created-date">Created: 15/08/13</span>
+                                <i class="icon icon-expand"></i>
+                            </p>
+                        </div>
+                        <div class="body">
+                            <table class="list-tbl">
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">CBHY564546769978654</td>
+                                    <td class="des">Volcanos</td>
+                                    <td class="type">Video</td>
+                                    <td class="size">56MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">C1234512345</td>
+                                    <td class="des">Science 3: The Big Bang Theory</td>
+                                    <td class="type">Video</td>
+                                    <td class="size">345MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">PQ45566TYU45</td>
+                                    <td class="des">Earth and Space</td>
+                                    <td class="type">Interactive Lesson</td>
+                                    <td class="size">150MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td class="check"><input type="checkbox" /></td>
+                                    <td class="ref">A12345</td>
+                                    <td class="des">Shapes</td>
+                                    <td class="type">Interactive lesson</td>
+                                    <td class="size">567MB</td>
+                                    <td class="quick-view"><a href="./result-detail.html"> <i class="icon icon-eye-open"></i> View</a></td>
+                                    <td class="email"><a href=""> <i class="icon icon-envelope"></i> Email</a></td>
+                                    <td class="del"><a href=""><i class="icon icon-minus-sign"></i></a> </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Bulk Upload Tab Contents -->
+
+            <section id="content3" class="tabbed-content drop-shadow">
+                <h2>Bulk Upload</h2>
+                <p>Copy to explain the  upload process. Content file sizes are limited to 1gb.</p>
+                <form id="upload-form">
+                    <div class="panel grey-bg">
+                        <div class="row posRel">
+                            <div class="column size1of2">
+                                <div class="inner">
+                                    <ul class="">
+                                        <li class="form-row clearfix">
+                                            <label for="mata-data">Metadata file</label>
+                                            <input id="mata-data" class="left" type="file"/> <i class="icon icon-minus-sign"></i>
+                                        </li>
+                                        <li class="form-row clearfix">
+                                            <label for="content-file">Content file</label>
+                                            <input id="content-file" class="left" type="file"/> <i class="icon icon-minus-sign"></i>
+                                        </li>
+                                        <li class="button-row">
+                                            <button class="pri-button" id="uplaod-button">Upload to queue</button>
+                                        </li>
+                                    </ul>
+                                </div>    
+                            </div>
+                            <div class="column size1of2">
+                                <div class="inner">
+                                    <div class="result-panel">
+                                        <span class="icon-panel">
+                                            <i class="icon icon-ok"></i>
+                                            <!--<i class="icon icon-ok-sign"></i> -->
+                                            <!--<i class="icon icon-remove"></i> -->
+                                            <!--<i class="icon icon-remove-sign"></i> -->
+                                            <!--<i class="icon icon-exclamation"></i> -->
+                                            <!--<i class="icon icon-exclamation-sign"></i>  -->
+                                            <!--<i class="icon icon-info"></i> -->
+                                            <!--<i class="icon icon-info-sign"></i> -->
+                                            <!--<i class="icon icon-question"></i> -->
+                                            <!--<i class="icon icon-question-sign"></i> -->
+                                        </span>
+                                        <p class="message info"><i class="icon"></i>Log created : 161213META123</p>
+                                        <!--<p class="message warning"><i class="icon"></i>Warning message</p>-->
+                                        <!--<p class="message error"><i class="icon"></i>Error message</p>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="upload-logs-container" class="inner">
+                            <div class="panel">
+                                <div class="row">
+                                    <div class="column size1of1">
+                                        <div class="inner">
+                                            <h3>Upload Logs</h3>
+                                            <table id="upload-logs-tbl">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="date">Date uploaded</th>
+                                                        <th class="ref">Log Reference</th>
+                                                        <th class="view">&nbsp;</th>
+                                                        <th class="notes">Add Notes</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>03/10/2013</td>
+                                                        <td>03102013FIL1</td>
+                                                        <td><a href="" class="viewFiles">View files</a></td>
+                                                        <td><input class="notes" type="text" /> </td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td>20/10/2013</td>
+                                                        <td>20102013FIL1</td>
+                                                        <td><a href="" class="viewFiles">View files</a></td>
+                                                        <td><input class="notes" type="text" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06/11/2013</td>
+                                                        <td>06112013FIL1</td>
+                                                        <td><a href="" class="viewFiles">View files</a></td>
+                                                        <td><input class="notes" type="text" /></td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td>03/09/2013</td>
+                                                        <td>03092013FIL1</td>
+                                                        <td><a href="" class="viewFiles">View files</a></td>
+                                                        <td><input class="notes" type="text" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>03/09/2013</td>
+                                                        <td>03092013FIL2</td>
+                                                        <td><a href="" class="viewFiles">View files</a></td>
+                                                        <td><input class="notes" type="text" /></td>
+                                                    </tr>
+                                                    <tr class="even">
+                                                        <td>02/11/2013</td>
+                                                        <td>02112013FIL1</td>
+                                                        <td><a href="" class="viewFiles">View files</a></td>
+                                                        <td><input class="notes" type="text" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>04/12/2013</td>
+                                                        <td>04122013FIL</td>
+                                                        <td><a href="" class="viewFiles">View files</a> </td>
+                                                        <td><input class="notes" type="text" /></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+        <!-- Page content end -->
+    </section>
+</div>
+<footer id="page-footer">
+    <p>&copy; 2014 Pearson Education Limited. All rights reserved.</p>
+</footer>
+
+<div id="dialogs">
+
+    <div id="eMailDialog">
+        <form id="rightDeptReqFrm">
+            <ul>
+                <li>
+                    <p class="message info"><i class="icon"></i>Please specify how you intend to use this asset, by completing the form below.
+                    All fields are required!</p>
+                </li>
+                <li class="form-row">
+                    <label for="businessUnit">Pearson business unit</label>
+                    <select name="" id="businessUnit">
+                        <option selected>Please Select</option>
+                        <option value="">Schools</option>
+                        <option value="">Higher Education</option>
+                        <option value="">Other</option>
+                    </select>
+                </li>
+                <li class="form-row">
+                    <label for="legal">Pearson legal entity</label>
+                    <select name="" id="legal">
+                        <option selected>Please Select</option>
+                        <option value="">Schools</option>
+                        <option value="">Higher Education</option>
+                        <option value="">Other</option>
+                    </select>
+                </li>
+                <li class="form-row">
+                    <label for="intendedUse">how do you intend to re-use this asset?</label>
+                    <input type="text" id="intendedUse" />
+                </li>
+                <li class="form-row">
+                    <label class="fullWidth">Will you use the whole asset or just part of it?</label>
+                    <span><input id="whole" type="radio" name="radioGroup1" /><label for="whole">Whole</label> </span>
+                    <span><input id="part" type="radio" name="radioGroup1" /><label for="part">Part</label> </span>
+                </li>
+                <li class="form-row">
+                    <label class="fullWidth">Will you use it?</label>
+                    <span><input id="asIs" type="radio" name="radioGroup2" /><label for="asIs">As is</label> </span>
+                    <span><input id="adapt" type="radio" name="radioGroup2" /><label for="adapt">Adapt it</label> </span>
+                </li>
+                <li class="form-row">
+                    <label for="use">Intended use</label>
+                    <input id="use" type="text"/>
+                </li>
+                <li class="form-row">
+                    <label for="price">Estimated sale price</label>
+                    <input id="price" type="text"/>
+                </li>
+                <li class="form-row">
+                    <label for="market">Target Market</label>
+                    <input id="market" type="text"/>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <div id="addToListDialog">
+        <form id="addToListFrm">
+            <ul>
+                <li class="form-row">
+                    <label for="exList">Choose a list</label>
+                    <select id="exList">
+                        <option>List 1</option>
+                        <option>List 2</option>
+                        <option>List 3</option>
+                    </select>
+                </li>
+                <li class="form-row">
+                    <label for="newList">New List</label>
+                    <input id="newList" type="text"/>
+                </li>
+                <li class="form-row">
+                    <label for="notes">Add notes here</label>
+                    <textarea id="notes">
+
+                    </textarea>
+                </li>
+            </ul>
+        </form>
+    </div>
+
+    <div id="viewFilesDialog">
+        <form>
+            <table>
+                <tr>
+                    <td>MetadataFile.xls</td>
+                    <td>78MB</td>
+                    <td rowspan="2"> <a class="reUpload" href="#">Re-Upload</a></td>
+                </tr>
+                <tr>
+                    <td>newContentFile</td>
+                    <td>800MB</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div id="deleteConfirmDialog">
+        <p class="message warning"><i class="icon icon-exclamation"></i>Are you sure you want to delete this list? </p>
+    </div>
+
+</div>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-8402917-5', 'mike-speight.co.uk');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@charset "utf-8";
+a{color:#005F44;}
+body .selected a{color:#3ca85d;}
+body .dark{color:#008b5d;}
+body .light{color:#3ca85d;}
+body .hsDate{color:#008b5d;}
+#list .item  .hsDescription a{color:#4D4D4D;}
+#list .item  .hsDescription a:hover{color:#008b5d; text-decoration:underline;}
+
+.search a{color:#6d605d;}
+.search a:hover{color:#008b5d;}
+
+#mainContent #hbpagestop ul li a.prev, #mainContent #hbpagestop ul li a.next{color:#005F44;border:none;}
+#mainContent #hbpagestop ul li a, #mainContent #hbpagestop ul li a{color:#005F44;}
+
+#hbpagestop ul li a:hover{color:#008b5d;}
+
+#head{background:#008b5d url('/etc/designs/pearson-brandmicrosite/images/2010/bg_header_nav.gif');}
+#head .logo{background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/logo.gif') no-repeat 17px 11px;}
+#head .tagline{background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/tagLine.gif') no-repeat bottom;}
+
+div.nav  li li a:hover{background:#008b5d;}
+
+div.nav  li a:hover{background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/bg_header_nav_hover.gif');}
+div.nav li ul {background: url('/etc/designs/pearson-brandmicrosite/images/2010/green/bg_header_nav_drop.png') bottom !important; background: url('/etc/designs/pearson-brandmicrosite/images/2010/green/bg_header_nav_drop.gif') bottom;}
+div.nav .selectedParent a,div.nav .selected  a{background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/bg_header_nav_hover.gif');}
+
+/*
+#sideNav li a{background:#0ca15f; border-top:1px solid #006f4a;border-bottom:1px solid #006f4a;}
+#sideNav li li a:hover{color:#008b5d;}
+#sideNav li li li a{background:#c9e0ce;}
+*/
+
+div.sideNav li a{ border-top:1px solid #c9c4bb;border-bottom:1px solid #c9c4bb; }
+div.sideNav li li a:hover{color:#008b5d;}
+div.sideNav li li li a{}
+
+div.sideNav .selected a:hover{color:#fff;}
+div.sideNav .selected li a:hover{color:#008b5d;}
+div.sideNav .selectedParent a{color:#fff;}
+div.sideNav .selectedParent ul a{color:#4D4D4D;}
+
+div.sideNav .selected a{color:#fff;background:#008b5d;}
+div.sideNav .selected li a{background:#fcf5eb;color:#4D4D4D;}
+div.sideNav .selected li li a{background:#e2ebde;}
+
+div.sideNav li .selected a{color:#fff;background:#008b5d;}
+div.sideNav li .selected li a{background:#e2ebde;color:#4D4D4D;}
+div.sideNav li .selected li li a{background:transparent;}
+
+div.sideNav li li .selected a{color:#fff;background:#e2ebde;}
+div.sideNav li li .selected li a{background:#e2ebde;color:#4D4D4D;}
+div.sideNav li li .selected li li a{background:transparent;}
+
+div.sideNav li .selectedParent a:hover{color:#fff}
+div.sideNav li .selectedParent li a:hover{color:#008b5d;}
+div.sideNav li .selectedParent a{background:#008b5d; color:#fff;}
+div.sideNav li .selectedParent li a{background:#e2ebde; color:#4D4D4D;}
+
+div.sideNav li .selectedParent .selected a{color:#008b5d;}
+div.sideNav li .selectedParent .selected li a{color:#4D4D4D;}
+
+div.sideNav li .selectedParent .selected li a:hover{color:#008b5d;} /* added 8-11-2011 to allow for 5 levels */ 
+
+#controls .submit{background:url(/etc/designs/pearson-brandmicrosite/images/2010/green/btn_search_go.gif) no-repeat 0px 0px!important; background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/btn_search_go.gif) no-repeat 0px 3px; }
+
+#controls .global{background:url(/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.png) no-repeat 0px 0px !important;background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.gif) no-repeat 0px 0px; }
+#controls .fontSize{background:url(/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.png) no-repeat -30px 0px !important;background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.gif) no-repeat -30px 0px;}
+#controls .print{background:url(/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.png) no-repeat -60px 0px !important;background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.gif) no-repeat -60px 0px;}
+
+#controls .global:hover{background:url(/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.png) no-repeat 0px -25px !important;background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.gif) no-repeat 0px -25px;}
+#controls .fontSize:hover{background:url(/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.png) no-repeat -30px -25px !important;background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.gif) no-repeat -30px -25px;}
+#controls .print:hover{background:url(/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.png) no-repeat -60px -25px !important;background:url('/etc/designs/pearson-brandmicrosite/images/2010/green/btn_controls.gif) no-repeat -60px -25px;}
+
+/*#tickerBar{background:#008b5d;}*/
+div.newsticker{background:#008b5d;}
+
+.internal #containers #a .heading{background:#008b5d !important;}
+.internal #containers #b .heading{background:#0ca15f !important;}
+.internal #containers #c .heading{background:#3ca85d !important;}
+.internal #containers #d .heading{background:#60af5b !important;}
+.internal #containers #e .heading{background:#7cb558 !important;}
+
+#globalListBox  li a{color:#000;}
+#globalListBox  li a:hover{color:#005F44;}

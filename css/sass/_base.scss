@@ -1,0 +1,172 @@
+body {
+  width: 100%;
+  font-family: $base-font;
+  font-size: 12px;
+  color: $text-col;
+  background-color: $bg-col;
+}
+
+h1 {
+  font-family: $base-font;
+  color: $primary-col;
+  font-size: 20px;
+  margin: 20px 0;
+}
+h2 {
+  font-family: $base-font;
+  color: $text-col;
+  color: $primary-col;
+  font-size: 18px;
+}
+h3 {
+  font-family: $base-font;
+  color: $text-col;
+  color: $text-col;
+  font-size: 16px;
+}
+h4 {
+  font-family: $base-font;
+  color: $text-col;
+  color: $text-col;
+  font-size: 14px;
+  margin:10px 0;
+}
+
+a {
+  color: $primary-col;
+}
+
+.drop-shadow {
+  @include box-shadow( 6px, 0.4);
+  margin: 0 10px 10px 0;
+}
+.inner {
+  padding: 10px 20px;
+  display: block;
+  height:100%;
+}
+.panel {
+  background-color: $panel-bg-col;
+  border: 1px solid $light-bdr-col;
+  @include border-radius(10px);
+  p {
+    margin: 10px 0 20px;
+  }
+}
+
+.panel.grey-bg {
+  background-color: #f3f3f3;
+}
+
+.posRel {
+  position: relative;
+}
+
+.separator:before {
+  content:" ";
+  margin:0 -1px;
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: $wht-border-col;
+}
+
+.dk-separator:before {
+  content:" ";
+  margin:0 -1px;
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  background: $dk-border-col;
+}
+
+.bott-separator {
+  border-bottom: 1px solid $dk-border-col;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+.margin-right {
+  margin-right: 10px;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.fullWidth { width: 100%;}
+.halfWidth { width: 50%;}
+.thirdWidth { width: 33%;}
+.quarterWidth { width: 25%;}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+button,
+a {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a.button,
+button {
+  @include box-shadow( 3px, 0.5);
+  @include border-radius (5px);
+  font-weight: bold;
+  padding: 0 20px;
+  line-height: 25px;
+  cursor: pointer;
+  i.icon {
+    font-size: 14px;
+    margin-left: 10px;
+    color: $primary-col;
+  }
+  &.pri-button {
+    @include grad-border($primary-col, $support2-col, $support4-col);
+    @include top-down-grad($support2-col, $primary-col);
+    color: $wht-text;
+    i {
+      color: $wht-text;
+    }
+    &.backBtn {
+      i {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+  &.pri-button:hover{
+    @include grad-border($primary-col, $support2-col, $support4-col);
+    @include top-down-grad( $primary-col, $support2-col);
+  }
+  &.sec-button {
+    @include grad-border($light-bdr-col, $light-bdr-col, $light-bdr-col);
+    @include top-down-grad($panel-bg-col, $light-bdr-col);
+    color: $text-col;
+  }
+  &.sec-button:hover{
+    @include grad-border($light-bdr-col, $light-bdr-col, $light-bdr-col);
+    @include top-down-grad( $light-bdr-col, $panel-bg-col);
+  }
+}

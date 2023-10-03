@@ -1,0 +1,57 @@
+/*
+*  Typography Styles
+*/
+
+@lg-heading: 1.85em;    .lg-heading{ font-size: @lg-heading}   //30px
+@med-lg-heading: 1.6em; .med-lg-heading {font-size: @med-lg-heading} //26px
+@med-heading: 1.5em;    .med-heading{font-size: @med-heading}  //24px
+@med-sml-heading: 1.35em; .med-sml-heading { font-size: @med-sml-heading} //22px
+@sml-heading: 1.125em;  .sml-heading{font-size: @sml-heading}  //18px
+
+@lg-text: 1em;          .lg-text{font-size: @lg-text}   //16px
+@med-lg-text: 0.938em;   .med-lg-text { font-size: @med-lg-text}//15px
+@med-text: 0.875em;     .med-text{font-size: @med-text} //14px
+@med-sml-text: 0.8em;   .med-sml-text {font-size: @med-sml-text}; //13px
+@sml-text: 0.75em;      .sml-text{font-size: @sml-text} //12px
+
+//@import "font-awesome";
+//@import "bootstrap/glyphicons";
+
+/* Source Sans Pro Font Styles */
+
+@stdFontRegular: "SourceSansProReg";
+@stdFontBold: "SourceSansProBold";
+@brandFontRegular: "CoHeadlineRegular";
+@brandFontBold: "CoHeadlineStdBold";
+
+@font-face {
+  font-family: 'SourceSansProReg';
+  src: url('@{font-path}SourceSansPro-Regular.eot');
+  src: url('@{font-path}SourceSansPro-Regular.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('@{font-path}SourceSansPro-Regular.woff?v=4.0.3') format('woff'), url('@{font-path}SourceSansPro-Regular?v=4.0.3') format('truetype'), url('@{font-path}SourceSansPro-Regular?v=4.0.3') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceSansProBold';
+  src: url('@{font-path}SourceSansPro-Bold.eot?v=4.0.3');
+  src: url('@{font-path}SourceSansPro-Bold.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('@{font-path}SourceSansPro-Bold.woff?v=4.0.3') format('woff'), url('@{font-path}SourceSansPro-Bold?v=4.0.3') format('truetype'), url('@{font-path}SourceSansPro-Bold?v=4.0.3') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CoHeadlineRegular';
+  src: url('@{font-path}coHeadlineRegular.eot');
+  src: url('@{font-path}coHeadlineRegular.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('@{font-path}coHeadlineRegular.woff?v=4.0.3') format('woff'), url('@{font-path}coHeadlineRegular?v=4.0.3') format('truetype'), url('@{font-path}coHeadlineRegular?v=4.0.3') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CoHeadlineStdBold';
+  src: url('@{font-path}coHeadlineStdBold.eot?v=4.0.3');
+  src: url('@{font-path}coHeadlineStdBold.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('@{font-path}coHeadlineStdBold?v=4.0.3') format('woff'), url('@{font-path}coHeadlineStdBold?v=4.0.3') format('truetype'), url('@{font-path}coHeadlineStdBold?v=4.0.3') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
